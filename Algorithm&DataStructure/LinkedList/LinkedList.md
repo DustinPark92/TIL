@@ -10,19 +10,26 @@
 
 
 
-Head -> [datafield,linked field] ->  [datafield,linked field] <- Tail    Nil <-          (Node,vertex)                                -> Nil
+Head -> [datafield,linked field] ->  [datafield,linked field] <- Tail        
 
 
-*Head : Linked List를 사용하기 위해서는 이 Head가 가르키는 첫ㅈ번째 노드를 찾아야 함.
+Nil <-          (Node,vertex)                                -> Nil
+
+
+* Head : Linked List를 사용하기 위해서는 이 Head가 가르키는 첫ㅈ번째 노드를 찾아야 함.
 
 
 
-Singly linked list
+* Singly linked list
 다음 노드의 레퍼런스만을 가진다.
 
-Doubly linked list : 이전 노드와 다음 노드의 레퍼런스를 가진다.
+* Doubly linked list : 이전 노드와 다음 노드의 레퍼런스를 가진다.
 
-->Head   node0 <-> node2 <-> node3 -> nil   <- Nil                             <- tail
+->Head   node0 <-> node2 <-> node3 -> nil   
+
+
+
+<- Nil                             <- tail
 
 
 
