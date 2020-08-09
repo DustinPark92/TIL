@@ -16,7 +16,7 @@ Head -> [datafield,linked field] ->  [datafield,linked field] <- Tail
 Nil <-          (Node,vertex)                                -> Nil
 
 
-* Head : Linked List를 사용하기 위해서는 이 Head가 가르키는 첫ㅈ번째 노드를 찾아야 함.
+* Head : Linked List를 사용하기 위해서는 이 Head가 가르키는 첫 번째 노드를 찾아야 함.
 
 
 
