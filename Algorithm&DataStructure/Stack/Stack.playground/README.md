@@ -14,4 +14,4 @@
 2. Peek : 구조상 스택 안에 구성을 확인 불가. Peek method는 스택의 상단에 요소를 확인 할 수 있다.
 3. Pop : Stack 상단에 있는 요소를 제거.
 
-https://www.raywenderlich.com/800-swift-algorithm-club-swift-stack-data-structure 참조.
+https://www.raywenderlich.com/800-swift-algorithm-club-swift-stack-data-structure 참조
