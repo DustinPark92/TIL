@@ -1,0 +1,116 @@
+
+
+import UIKit
+
+
+//객체지향, 프로토콜 , 함수형
+
+var str = "Hello, playground"
+
+
+//1.반복문 사용
+
+//1. 1~100까지 숫자 담기
+
+var numberList = [Int]()
+var twoNumberList = [Int]()
+
+for i in 1...100 {
+//    if i % 2 == 0 {
+//        twoNumberList.append(i)
+//    }
+    numberList.append(i)
+}
+
+for i in 1...100 {
+    twoNumberList.append(i * 2)
+}
+
+
+print(numberList)
+print(twoNumberList)
+
+
+//Map : 기존 데이터를 새로운 데이터로 변형
+
+
+//var twoNumberListUsingMap = numberList.map { (<#Int#>) -> T in
+//    <#code#>
+//}
+
+var twoNumberListUsingMap = numberList.map {
+    $0 * 2
+}
+
+print(twoNumberListUsingMap)
+
+//영화 리스트
+var movieList = [
+"괴물" : "박찬욱",
+"기생충" : "봉준호",
+"인터스텔라" : "크리스토퍼 놀란",
+"인셉션" : "크리스토퍼 놀란",
+"옥자" : "봉준호",
+"올드보이" : "박찬욱",
+"설국열차" : "박찬욱"
+]
+
+var director = [String:String]()
+var directorFilm = [String]()
+
+
+for (key,value) in movieList {
+    
+    if value == "봉준호" {
+        director.updateValue(value, forKey: key)
+    }
+    
+}
+
+print(director)
+
+//var directorList = movieList.map {
+//    $0.value == "봉준호"
+//
+//}
+//
+//print(directorList)
+
+var directorList = movieList.filter {
+    $0.value == "봉준호" //value가 봉준호일떄,
+
+}.map{
+    $0.key //key는? => Array
+}.sorted(by: > )
+
+print(directorList)
+
+
+let studentGradeList = [3.3, 2.7, 4.2, 4.5, 2.9, 3.1, 4.0, 3.8, 1.5]
+
+var highClass = studentGradeList.filter {
+    $0 > 3.0
+}
+
+print(highClass)
+
+
+//Reduce 총합을 구할떄 사용
+
+var collegeExamScore : [Double] = [100, 30, 40, 70, 95, 85, 100, 90]
+
+
+let totalSourceReduce = collegeExamScore.reduce(0) {
+    return $0 + $1
+}
+print(totalSourceReduce)
+
+
+// <#T##initialResult: Result##Result#> -> 초기 값 ,<#T##nextPartialResult: (Result, Double) throws -> Result##(Result, Double) throws -> Result#>
+// 초기값. + ( $0 + $1 ) 
+
+
+let array = [1,2,3,4,5,6,7,8,9,10]
+var stringArray = array.map {"\($0)위"}
+
+print(stringArray)
